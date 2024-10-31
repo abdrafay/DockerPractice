@@ -76,5 +76,5 @@ jobs:
             docker rm testing_docker || true &&
             
             # Run the new container with the pulled image
-            docker run -d --name testing_docker -p 80:5000 ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/testing_docker:latest
+            docker run -d --name testing_docker -p 5000:5000 ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/testing_docker:latest
           "
